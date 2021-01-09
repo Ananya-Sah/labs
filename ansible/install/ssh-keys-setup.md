@@ -16,6 +16,7 @@
         on ansible controller machine
 		cd /home/ananya/.ssh 
 		cat id_rsa.pub (copy the content)
+		sudo systemctl restart sshd
 ```
 ### copy user ssh keys from ansible contrller to all target hosts
 
@@ -26,6 +27,8 @@
 		   touch /home/ananya/.ssh/authorized_keys
 		   chmod -R 700 /home/ananya/.ssh
 		   vi /home/ananya/.ssh/authorized_keys  (enter the copied contet of id_rsa.pub from controller & save the file)
+		   sudo systemctl restart sshd
+
 ```	
 	
 
